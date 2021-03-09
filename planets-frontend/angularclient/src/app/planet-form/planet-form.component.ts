@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { PlanetService } from '../service/planet-service.service';
 import { Planet } from '../model/planet';
 import { Crew } from '../model/crew';
+import { Robot } from '../model/robot';
 
 @Component({
   selector: 'app-planet-form',
@@ -15,6 +16,8 @@ export class PlanetFormComponent  {
 
 	planet: Planet;
 
+  robot: Robot;
+
   
 
   constructor(
@@ -24,8 +27,6 @@ export class PlanetFormComponent  {
     this.planet = new Planet();
     this.planet.crew = new Crew();
      this.planet.crew.robots = [];
-     this.planet.image=ArrayBuffer;
-     this.robot = [];
   }
 
   onSubmit() {

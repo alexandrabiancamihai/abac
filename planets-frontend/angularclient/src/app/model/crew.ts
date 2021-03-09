@@ -1,5 +1,3 @@
-
-import { Captain } from '../model/captain';
 import { Robot } from '../model/robot';
 
 export class Crew {

@@ -21,15 +21,10 @@ export class PlanetService {
   }
 
   public postFile(id: number, fileToUpload: File): Observable<any> {
-    // const endpoint = 'your-destination-url';
      const formData: FormData = new FormData();
      formData.append('fileKey', fileToUpload, fileToUpload.name);
-         return this.http.post<FormData>(this.planetsUrl + '/upload/' + id)
+         return this.http.post<FormData>(this.planetsUrl + '/upload/' + id, formData)
 
-    // return this.httpClient
-    //   .post(endpoint, formData, { headers: yourHeadersConfig })
-    //   .map(() => { return true; })
-    //   .catch((e) => this.handleError(e));
 }
 
 }
