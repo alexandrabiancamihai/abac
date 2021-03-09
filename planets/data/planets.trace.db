@@ -1,0 +1,6 @@
+2021-03-08 17:01:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PLANET" not found; SQL statement:
+select planet0_.id as id1_2_0_, planet0_.image as image2_2_0_, planet0_.name as name3_2_0_, planet0_.status as status4_2_0_ from planet planet0_ where planet0_.id=? [42102-200]
+2021-03-08 17:02:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CREW" not found; SQL statement:
+insert into crew (id, captain_name) values (null, ?) [42102-200]

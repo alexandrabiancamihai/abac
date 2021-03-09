@@ -1,0 +1,49 @@
+<div class="card my-5">
+  <div class="card-body" *ngIf="planet">
+    <form (ngSubmit)="onSubmit()" #planetForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" [(ngModel)]="planet.name" 
+          class="form-control" 
+          id="name" 
+          name="name" 
+          placeholder="Enter planet's name"
+          >
+      </div>
+      <div class="form-group">
+        <label for="status">Status</label>
+        <input type="text" [(ngModel)]="planet.status" 
+          class="form-control" 
+          id="status" 
+          name="status" 
+          placeholder="Enter status: OK, !OK, TODO, EnRoute" 
+          >
+      </div>
+       <div class="form-group">
+        <label for="captainName">Crew captain</label>
+        <input type="text" [(ngModel)]="planet.crew.captainName" 
+          class="form-control" 
+          id="captainName" 
+          name="captainName" 
+          placeholder="Enter captain name">
+      </div>
+        <div class="form-group">
+        <label for="robot">Robot</label>
+        <input type="list" [(ngModel)]="robot" 
+          class="form-control" 
+          id="robot" 
+          name="robot" 
+          placeholder="Enter robot name">
+      </div>  
+       <div class="form-group"> 
+     <label for="file">Choose image for planet</label>
+    <input type="file"
+           id="file"
+           (change)="handleFileInput($event.target.files)">
+    </div>
+ 
+      <button type="submit" [disabled]="!planetForm.form.valid" 
+        class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Avatar</th>
+          <th scope="col">Status</th>
+          <th scope="col">Crew captain</th>
+          <th scope="col">Crew robots</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let planet of planets">
+          <td>{{ planet.id }}</td>
+          <td>{{ planet.name }}</td>
+          <td> <img src="assets/planet.jpg" height="50px" width="50px" /></td>
+          <td>{{ planet.status }}</td>
+          <td>{{ planet.crew.captainName }}</td>
+          <td *ngFor="let robot of planet.crew.robots">
+              {{robot.name}} 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+   
+</div>
